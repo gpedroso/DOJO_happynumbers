@@ -1,12 +1,11 @@
 def happy(number):
-    if number == 10 or number == 100 or number == 1:
+    if number in (1, 10, 100):
         string = str(number)
-        total = 0
-        i = 0
+        total, i = 0, 0
 
         while i < len(string):
-            total = total + int(string[i])
-            i = i + 1
+            total += int(string[i])
+            i += 1
 
         return total == 1
 
