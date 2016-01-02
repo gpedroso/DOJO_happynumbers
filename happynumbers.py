@@ -5,13 +5,13 @@ def sum_of_squares(number):
     return total
 
 def happy(number):
-    if number in (97, 130, 1, 10, 100):
-        n = number
-        while n!=1:
-            n = sum_of_squares(n)
-        return n == 1
+    box = []
+    n = number
+    while n!=1 and n not in box:
+        box.append(n)
+        n = sum_of_squares(n)
+    return n == 1
 
-    return False
 
 assert sum_of_squares(130) == 10
 assert happy(1) == True
