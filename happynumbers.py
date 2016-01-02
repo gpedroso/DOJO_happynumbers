@@ -13,10 +13,5 @@ def happy(number):
     return n == 1
 
 
-assert sum_of_squares(130) == 10
-assert happy(1) == True
-assert happy(10) == True
-assert happy(100) == True
-assert happy(130) == True
-assert happy(97) == True
-assert not happy(4) == True
+assert all(happy(n) for n in (1,10,100,130,97))
+assert not all (happy(n) for n in (2,3,4,5,6,8,9))
