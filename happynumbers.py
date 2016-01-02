@@ -5,6 +5,11 @@ def sum_of_squares(number):
     return total
 
 def happy(number):
+    if number < 10:
+        return number in (1, 7)
+
+    return (happy(sum_of_squares(number)))
+
     box = []
     n = number
     while n!=1 and n not in box:
